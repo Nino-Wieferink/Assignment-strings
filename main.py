@@ -22,21 +22,22 @@ print(report)
 #1
 player = 'Berry van Aerle'
 #2
-first_name = player[:5]
+first_name = player[0:player.find(" ")]
+print(first_name)
 #3
-last_name_start = player.find("v")
-last_name = player[last_name_start:]
+last_name = player[player.find(" ")+1:]
+print(last_name)
 last_name_len = len(last_name)
 print(last_name_len)
 #4
-initial_num = player.find("B")
-initial_let = player[initial_num:1]
+initial_num = player.find(player[0])
+initial_let = player[initial_num]
 initial_capital = initial_let + ". "
 name_short = initial_capital + last_name
 print(name_short)
 #5
-first_name_num = player.find("B")
-first_name = player[first_name_num:5]
+first_name_num = player.find(player[0])
+first_name = player[first_name_num:player.find(" ")]
 chant =  f'{first_name}! ' * len(first_name)
 chant = chant[:-1]
 print(chant)
